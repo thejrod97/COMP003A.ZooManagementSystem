@@ -24,6 +24,17 @@ namespace COMP003A.ZooManagementSystem
             }
         }
 
+        public string Species
+        {
+            get { return _species; }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new ArgumentException("Species can't be null or white space.");
+                _species = value;
+            }
+        }
+
         // Abstract method with overriding so we can modify the iteration of code within.
         public abstract void MakeSound(); 
     }
