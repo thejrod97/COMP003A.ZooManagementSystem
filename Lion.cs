@@ -8,9 +8,14 @@ namespace COMP003A.ZooManagementSystem
 {
     internal class Lion : Animal
     {
+        public Lion(string nameLion, string speciesLion)
+        {
+            Name = nameLion;
+            Species = speciesLion;
+        }
         public override void MakeSound()
         {
-            Console.WriteLine("The lion roars!");
+            Console.Write("The lion roars!");
         }
     }
 }
